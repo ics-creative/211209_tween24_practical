@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SVGのアニメーション</title>
+    <link rel="stylesheet" href="../style.scss" />
+  </head>
+  <body>
+    <section>
+      <div>
+        <svg width="300" height="300" viewBox="0 0 300 300">
+          <style type="text/css">
+            .st0 {
+              fill: none;
+              stroke: #92e58c;
+              stroke-width: 100;
+              stroke-miterlimit: 10;
+            }
+          </style>
+          <path
+            class="st0"
+            d="M150,51c54.7,0,99,44.3,99,99c0,54.7-44.3,99-99,99c-54.7,0-99-44.3-99-99C51,95.3,95.3,51,150,51z"
+          />
+        </svg>
+      </div>
+      <button class="js-replay replayButton">再生</button>
+    </section>
+
+    <p class="back">
+      <a href="../">一覧へ戻る</a>
+    </p>
+    <script type="module" src="/src/svg.js"></script>
+  </body>
+</html>

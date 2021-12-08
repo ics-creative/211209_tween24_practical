@@ -1,0 +1,282 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.back {
+  margin-top: 80px;
+  font-size: 18px;
+  &__white {
+    a {
+      color: #ffffff;
+    }
+  }
+}
+
+.replayButton {
+  padding: 4px 16px;
+  margin-top: 32px;
+  cursor: pointer;
+}
+
+.list {
+  &_item {
+    margin-bottom: 8px;
+    a {
+      position: relative;
+      display: inline-block;
+      font-size: 18px;
+    }
+  }
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #333333;
+}
+
+.beltScroll {
+  position: relative;
+  height: 24px;
+  overflow-x: hidden;
+}
+
+.beltScrollText {
+  position: absolute;
+  top: 0;
+  display: block;
+  white-space: nowrap;
+}
+
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  row-gap: 48px;
+  margin: 0 80px;
+}
+
+.card {
+  justify-self: center;
+  width: 300px;
+  img {
+    display: block;
+  }
+  h1 {
+    margin: 8px 0;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  p {
+    margin: 0 auto;
+    font-size: 16px;
+  }
+}
+
+.creativeBody {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #2d2d2d;
+}
+
+.creative {
+  position: relative;
+  width: 640px;
+  height: 540px;
+  color: #ffffff;
+  * {
+    font-family: "Saira", sans-serif;
+  }
+  &_contents {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  &_bar {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    overflow: hidden;
+    background-image: url("./creative/bg_bar.png");
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.6));
+    background-repeat: repeat-x;
+    background-position: 0 2px;
+    background-size: 25px 10px;
+    border-bottom: 1px solid #ffffff;
+    &__upper {
+      top: 16px;
+    }
+    &__lower {
+      bottom: 16px;
+      transform: rotate(180deg);
+    }
+  }
+  &_mainText {
+    position: absolute;
+    top: 48px;
+    z-index: 1;
+    &_title {
+      margin: 0 0 16px;
+      font-size: 34px;
+      line-height: 1;
+    }
+    &_paragraph {
+      width: 230px;
+      font-size: 10px;
+      line-height: 1.4;
+    }
+  }
+  &_nav {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    &_title {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+    ul {
+      padding-left: 0;
+      margin-top: 0;
+      font-size: 14px;
+      list-style: none;
+      li {
+        position: relative;
+        margin-bottom: 4px;
+        cursor: pointer;
+        &:before {
+          margin-right: 8px;
+          content: "-";
+        }
+      }
+    }
+  }
+  &_underlineWrapper {
+    position: relative;
+  }
+  &_underline {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+  }
+  &_image {
+    position: absolute;
+    top: 64px;
+    &_picture {
+      position: absolute;
+    }
+    &_path {
+      position: absolute;
+      top: 180px;
+      left: 25px;
+    }
+    &_star {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: #4fc3d3;
+      border-radius: 50%;
+      box-shadow: 0 0 2px #4fc3d3;
+      &.star1 {
+        top: 291px;
+        left: 60px;
+      }
+      &.star2 {
+        top: 289px;
+        left: 24px;
+      }
+      &.star3 {
+        top: 312px;
+        left: 36px;
+      }
+      &.star4 {
+        top: 342px;
+        left: 43px;
+      }
+      &.star5 {
+        top: 346px;
+        left: 86px;
+      }
+      &.star6 {
+        top: 341px;
+        left: 123px;
+      }
+      &.star7 {
+        top: 305px;
+        left: 152px;
+      }
+      &.star8 {
+        top: 260px;
+        left: 193px;
+      }
+      &.star9 {
+        top: 242px;
+        left: 220px;
+      }
+      &.star10 {
+        top: 241px;
+        left: 250px;
+      }
+      &.star11 {
+        top: 204px;
+        left: 325px;
+      }
+      &.star12 {
+        top: 177px;
+        left: 309px;
+      }
+      &.star13 {
+        top: 241px;
+        left: 323px;
+      }
+      &.star14 {
+        top: 280px;
+        left: 330px;
+      }
+    }
+  }
+  &_bgText {
+    position: absolute;
+    overflow: hidden;
+    font-size: 10px;
+    user-select: none;
+    opacity: 0.25;
+    .firstText,
+    .secondText {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &__1 {
+      top: 363px;
+      left: 32px;
+      width: 360px;
+      height: 119px;
+    }
+    &__2 {
+      top: 45px;
+      right: 28px;
+      width: 314px;
+      height: 193px;
+    }
+  }
+}
+
+.copyright {
+  font-size: 10px;
+  color: #ffffff;
+}
