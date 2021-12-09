@@ -3,35 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <title>テキストのアニメーション</title>
-
-    <script
-      type="module"
-      crossorigin
-      src="/211209_tween24_practical/assets/text.c52e8968.js"
-    ></script>
-    <link
-      rel="modulepreload"
-      href="/211209_tween24_practical/assets/style.7f2dd081.js"
-    />
-    <link
-      rel="modulepreload"
-      href="/211209_tween24_practical/assets/vendor.864692c0.js"
-    />
-    <link
-      rel="stylesheet"
-      href="/211209_tween24_practical/assets/style.0faf8688.css"
-    />
+    
+    <script type="module" crossorigin src="/211209_tween24_practical/assets/text.1406293a.js"></script>
+    <link rel="modulepreload" href="/211209_tween24_practical/assets/modulepreload-polyfill.b7f2da20.js">
+    <link rel="modulepreload" href="/211209_tween24_practical/assets/vendor.864692c0.js">
+    <link rel="stylesheet" href="/211209_tween24_practical/assets/style.6bbf32ef.css">
   </head>
   <body>
     <section>
-      <div>
-        <p class="text">Lorem Ipsum</p>
-      </div>
-      <button class="js-replay replayButton">再生</button>
+      <h1>見出しのアニメーション</h1>
+      <h1 class="headline">Lorem Ipsum</h1>
+      <button class="js-replay-headline replayButton">再生</button>
+    </section>
+
+    <section>
+      <h1>文章のアニメーション</h1>
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus,
+        deleniti eligendi itaque nam numquam, pariatur quaerat quod sapiente,
+        suscipit ullam vel! Ipsa maiores obcaecati officia sed vero voluptates
+        voluptatibus?
+      </p>
+      <button class="js-replay-text replayButton">再生</button>
     </section>
 
     <p class="back">
       <a href="../">一覧へ戻る</a>
     </p>
+    
   </body>
 </html>

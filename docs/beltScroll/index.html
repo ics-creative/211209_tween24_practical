@@ -3,27 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <title>ベルトスクロールアニメーション</title>
-
-    <script
-      type="module"
-      crossorigin
-      src="/211209_tween24_practical/assets/beltScroll.49766deb.js"
-    ></script>
-    <link
-      rel="modulepreload"
-      href="/211209_tween24_practical/assets/style.7f2dd081.js"
-    />
-    <link
-      rel="modulepreload"
-      href="/211209_tween24_practical/assets/vendor.864692c0.js"
-    />
-    <link
-      rel="stylesheet"
-      href="/211209_tween24_practical/assets/style.0faf8688.css"
-    />
+    
+    <script type="module" crossorigin src="/211209_tween24_practical/assets/beltScroll.d59c54f2.js"></script>
+    <link rel="modulepreload" href="/211209_tween24_practical/assets/modulepreload-polyfill.b7f2da20.js">
+    <link rel="modulepreload" href="/211209_tween24_practical/assets/vendor.864692c0.js">
+    <link rel="stylesheet" href="/211209_tween24_practical/assets/style.6bbf32ef.css">
   </head>
   <body>
     <section>
+      <h1>等速で流れていく文字</h1>
+      <h2>『走れメロス』</h2>
       <p class="beltScroll">
         <span class="beltScrollText firstText"
           >メロスは激怒した。必ず、かの邪智暴虐の王を除かなければならぬと決意した。メロスには政治がわからぬ。メロスは、村の牧人である。笛を吹き、羊と遊んで暮して来た。けれども邪悪に対しては、人一倍に敏感であった。きょう未明メロスは村を出発し、野を越え山越え、十里はなれた此のシラクスの市にやって来た。</span
@@ -32,7 +21,12 @@
           >メロスは激怒した。必ず、かの邪智暴虐の王を除かなければならぬと決意した。メロスには政治がわからぬ。メロスは、村の牧人である。笛を吹き、羊と遊んで暮して来た。けれども邪悪に対しては、人一倍に敏感であった。きょう未明メロスは村を出発し、野を越え山越え、十里はなれた此のシラクスの市にやって来た。</span
         >
       </p>
-      <div class="beltScroll">
+    </section>
+
+    <section>
+      <h1>文字数の違う複数文章並べても同じ速さで動く</h1>
+      <h2>『やまなし』</h2>
+      <div class="multiBeltScroll">
         <span class="beltScrollText firstText"
           >二疋の蟹の子供らが青じろい水の底で話していました。『クラムボンはわらったよ。』『クラムボンはかぷかぷわらったよ。』『クラムボンは跳ねてわらったよ。』『クラムボンはかぷかぷわらったよ。』上の方や横の方は、青くくらく鋼のように見えます。</span
         >
@@ -40,10 +34,28 @@
           >二疋の蟹の子供らが青じろい水の底で話していました。『クラムボンはわらったよ。』『クラムボンはかぷかぷわらったよ。』『クラムボンは跳ねてわらったよ。』『クラムボンはかぷかぷわらったよ。』上の方や横の方は、青くくらく鋼のように見えます。</span
         >
       </div>
+      <h2>『山月記』</h2>
+      <div class="multiBeltScroll">
+        <span class="beltScrollText firstText"
+          >西の李徴は博学才穎、天宝の末年、若くして名を虎榜に連ね、ついで江南尉に補せられたが、性、狷介、自ら恃むところ頗る厚く、賤吏に甘んずるを潔しとしなかった。いくばくもなく官を退いた後は、故山、かく略に帰臥し、人と交を絶って、ひたすら詩作に耽った。下吏となって長く膝を俗悪な大官の前に屈するよりは、詩家としての名を死後百年に遺そうとしたのである。</span
+        >
+        <span class="beltScrollText secondText"
+          >西の李徴は博学才穎、天宝の末年、若くして名を虎榜に連ね、ついで江南尉に補せられたが、性、狷介、自ら恃むところ頗る厚く、賤吏に甘んずるを潔しとしなかった。いくばくもなく官を退いた後は、故山、かく略に帰臥し、人と交を絶って、ひたすら詩作に耽った。下吏となって長く膝を俗悪な大官の前に屈するよりは、詩家としての名を死後百年に遺そうとしたのである。</span
+        >
+      </div>
+      <h2>『坊っちゃん』</h2>
+      <div class="multiBeltScroll">
+        <span class="beltScrollText secondText"
+          >親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。</span
+        >
+        <span class="beltScrollText firstText"
+          >親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。</span
+        >
+      </div>
     </section>
-
     <p class="back">
       <a href="../">一覧へ戻る</a>
     </p>
+    
   </body>
 </html>

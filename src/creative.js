@@ -34,7 +34,7 @@ document.querySelectorAll(".creative_nav li").forEach((element) => {
 });
 
 /**
- * Tweenの初期状態を設定
+ * トゥイーンの初期状態を設定
  * @type {Tween24}
  */
 const initProps = Tween24.serial(
@@ -51,7 +51,7 @@ const initProps = Tween24.serial(
 );
 
 /**
- * コンテンツが広がるTween
+ * コンテンツが広がるトゥイーン
  * @type {Tween24}
  */
 const ScreenTween = Tween24.tween(".creative_contents", 0.5, Ease24._3_CubicOut)
@@ -59,7 +59,7 @@ const ScreenTween = Tween24.tween(".creative_contents", 0.5, Ease24._3_CubicOut)
   .delay(0.5);
 
 /**
- * 上下の線のTween
+ * 上下の線のトゥイーン
  * @type {Tween24}
  */
 const lineTween = Tween24.serial(
@@ -74,7 +74,7 @@ const lineTween = Tween24.serial(
 );
 
 /**
- * タイトルのTween
+ * タイトルのトゥイーン
  */
 const titleTween = Tween24.serial(
   Tween24.lag(
@@ -86,7 +86,7 @@ const titleTween = Tween24.serial(
 );
 
 /**
- * 文章のTween
+ * 文章のトゥイーン
  */
 const paragraphTween = Tween24.serial(
   Tween24.lagTotal(
@@ -98,7 +98,7 @@ const paragraphTween = Tween24.serial(
 );
 
 /**
- * ナビゲーションのTween
+ * ナビゲーションのトゥイーン
  * @type {Tween24}
  */
 const showNavigationTween = Tween24.parallel(
@@ -113,14 +113,20 @@ const showNavigationTween = Tween24.parallel(
   )
 );
 
-// 星
+/**
+ * 星が出現するトゥイーン
+ * @type {Tween24}
+ */
 const starsTween = Tween24.lagTotalEase(
   0.8,
   Ease24._Linear,
   Tween24.tween(".creative_image_star", 0.5, Ease24._3_CubicOut).opacity(1)
 );
 
-// パス
+/**
+ * 星座のトゥイーンの配列
+ * @type {Tween24[]}
+ */
 const pathTweenList = Array.from(document.querySelectorAll("svg path")).map(
   (path) => {
     const pathLength = path.getTotalLength();
@@ -148,7 +154,10 @@ const pathTweenList = Array.from(document.querySelectorAll("svg path")).map(
   }
 );
 
-// 画像
+/**
+ * 星座のトゥイーンをしたあとに蠍座の画像を出すトゥイーン
+ * @type {Tween24}
+ */
 const pictureAndPathTween = Tween24.serial(
   Tween24.parallel(pathTweenList[0], pathTweenList[1]),
   Tween24.parallel(
@@ -157,6 +166,10 @@ const pictureAndPathTween = Tween24.serial(
   )
 );
 
+/**
+ * 背景で動くテキストのトゥイーン配列
+ * @type {Tween24[]}
+ */
 const bgTextTweenList = Array.from(
   document.querySelectorAll(".creative_bgText")
 ).map((element) => {
@@ -178,7 +191,10 @@ const bgTextTweenList = Array.from(
   return Tween24.loop(0, Tween24.parallel(firstTextTween, secondTextTween));
 });
 
-// 全体を実行する
+/**
+ * アニメーション全体を実行する
+ * @type {Tween24}
+ */
 const timeline = Tween24.serial(
   Tween24.func(() => {
     document.querySelectorAll("svg path").forEach((path) => {
@@ -211,6 +227,12 @@ timeline.play();
 
 document.querySelector(".js-replay").addEventListener("click", () => {
   timeline.stop();
+  document.querySelectorAll(".creative_bgText").forEach((element) => {
+    const firstText = element.querySelector(".firstText");
+    const secondText = element.querySelector(".secondText");
+    Tween24.prop(firstText).y(0).play();
+    Tween24.prop(secondText).y("100%").play();
+  });
   initProps.play();
   timeline.play();
 });

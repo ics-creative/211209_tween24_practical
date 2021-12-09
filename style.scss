@@ -9,9 +9,31 @@ a {
   text-decoration: none;
 }
 
+section {
+  width: 640px;
+  margin: 0 auto 56px;
+}
+
+h1,
+h2 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.indexList {
+  padding-left: 0;
+  margin-top: 24px;
+  li {
+    margin-bottom: 16px;
+    font-size: 20px;
+    list-style: none;
+  }
+}
+
 .back {
   margin-top: 80px;
   font-size: 18px;
+  text-align: center;
   &__white {
     a {
       color: #ffffff;
@@ -32,6 +54,11 @@ a {
       position: relative;
       display: inline-block;
       font-size: 18px;
+      &:hover {
+        .underline_css {
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -46,7 +73,19 @@ a {
   background-color: #333333;
 }
 
-.beltScroll {
+.underline_css {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #333333;
+  transition: width 0.2s cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.beltScroll,
+.multiBeltScroll {
   position: relative;
   height: 24px;
   overflow-x: hidden;
@@ -59,11 +98,23 @@ a {
   white-space: nowrap;
 }
 
+.headline {
+  font-size: 32px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cardListSection {
+  width: 960px;
+}
+
 .cardList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   row-gap: 48px;
-  margin: 0 80px;
 }
 
 .card {

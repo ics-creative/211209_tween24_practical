@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="../style.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>下線のアニメーション</title>
   </head>
   <body>
     <section>
+      <h1>下線のアニメーション</h1>
       <ul class="list">
         <li class="list_item">
           <a href="#">Home <span class="underline"></span></a>
@@ -19,13 +21,42 @@
           <a href="#">Works <span class="underline"></span></a>
         </li>
         <li class="list_item">
+          <a href="#">CSR <span class="underline"></span></a>
+        </li>
+        <li class="list_item">
+          <a href="#">Recruit <span class="underline"></span></a>
+        </li>
+        <li class="list_item">
           <a href="#">Contact Us <span class="underline"></span></a>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>下線のアニメーション（CSSのみの場合）</h1>
+      <ul class="list">
+        <li class="list_item">
+          <a href="#">Home <span class="underline_css"></span></a>
+        </li>
+        <li class="list_item">
+          <a href="#">About <span class="underline_css"></span></a>
+        </li>
+        <li class="list_item">
+          <a href="#">Works <span class="underline_css"></span></a>
+        </li>
+        <li class="list_item">
+          <a href="#">CSR <span class="underline_css"></span></a>
+        </li>
+        <li class="list_item">
+          <a href="#">Recruit <span class="underline_css"></span></a>
+        </li>
+        <li class="list_item">
+          <a href="#">Contact Us <span class="underline_css"></span></a>
         </li>
       </ul>
     </section>
     <p class="back">
       <a href="../">一覧へ戻る</a>
     </p>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="../src/underline.js"></script>
   </body>
 </html>
