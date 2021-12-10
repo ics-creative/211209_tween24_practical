@@ -10,7 +10,7 @@ const pathLength = path.getTotalLength();
 path.setAttribute("stroke-dasharray", String(pathLength));
 
 // アニメーション進捗のオブジェクト。valueの値をTweenさせる。目標値
-const tweenData = { progress: { value: 0 } };
+const tweenData = { progress: 0 };
 
 /**
  * アップデート時の実行する関数
@@ -18,17 +18,18 @@ const tweenData = { progress: { value: 0 } };
  */
 const update = () => {
   // 進捗率に長さを掛けたものがオフセット値
-  const offset = pathLength * (tweenData.progress.value / 100);
+  const offset = pathLength * (tweenData.progress / 100);
   path.setAttribute("stroke-dashoffset", String(offset));
 };
 
+// パスのトゥイーン
 const pathTween = Tween24.serial(
-  Tween24.prop(tweenData.progress, { value: 100 }),
+  Tween24.prop(tweenData, { progress: 100 }),
   Tween24.tween(
-    tweenData.progress,
+    tweenData,
     1,
     Ease24._1_SineIn,
-    tweenData.progress
+    tweenData
   ).onUpdate(update)
 );
 
