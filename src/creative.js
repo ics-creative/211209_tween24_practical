@@ -33,6 +33,8 @@ document.querySelectorAll(".creative_nav li").forEach((element) => {
   );
 });
 
+const afterInit = Tween24.tween(".creative",0).opacity(1)
+
 /**
  * トゥイーンの初期状態を設定
  * @type {Tween24}
@@ -204,10 +206,10 @@ const timeline = Tween24.serial(
     });
   }),
   initProps,
+  afterInit,
   Tween24.parallel(
     ScreenTween,
     lineTween,
-
     Tween24.parallel(
       Tween24.serial(
         Tween24.parallel(starsTween, pictureAndPathTween),
@@ -222,6 +224,7 @@ const timeline = Tween24.serial(
     ).delay(0.8)
   )
 );
+
 
 timeline.play();
 

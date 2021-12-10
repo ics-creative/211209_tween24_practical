@@ -120,6 +120,9 @@ h2 {
 .card {
   justify-self: center;
   width: 300px;
+  * {
+    opacity: 0;
+  }
   img {
     display: block;
   }
@@ -147,6 +150,7 @@ h2 {
   width: 640px;
   height: 540px;
   color: #ffffff;
+  opacity: 0;
   * {
     font-family: "Saira", sans-serif;
   }

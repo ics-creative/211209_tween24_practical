@@ -8,6 +8,7 @@ const pathLength = path.getTotalLength();
 
 // パスの長さを破線の間隔として設定
 path.setAttribute("stroke-dasharray", String(pathLength));
+path.setAttribute("stroke-dashoffset", String(pathLength));
 
 // アニメーション進捗のオブジェクト。valueの値をTweenさせる。目標値
 const tweenData = { progress: 0 };
